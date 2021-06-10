@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
     path('hello/', include('hello.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('register/', include('register.urls')),
     path('autos/', include('autos.urls')),
     path('cats/', include('cats.urls')),
     path('ads/', include('ads.urls')),
