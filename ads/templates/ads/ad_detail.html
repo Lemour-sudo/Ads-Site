@@ -38,7 +38,7 @@
 </p>
 <p>
 </p>
-<p>
+<p style="font-size: 1.5em;">
 <a href="{% url 'ads:all' %}">All ads</a>
 </p>
 {% if user.is_authenticated %}
@@ -48,17 +48,22 @@
 <form method="post" action="{% url 'ads:ad_comment_create' ad.id %}">
     {% csrf_token %}
     {{ comment_form|crispy }}
-<input type="submit" value="Submit">
-<input type="submit" value="All Ads" onclick="window.location.href='{% url 'ads:all' %}';return false;">
+    <input type="submit" value="Submit">
+    <input type="submit" value="All Ads" onclick="window.location.href='{% url 'ads:all' %}';return false;">
 </form>
 </p>
 {% endif %}
-{% for comment in comments %}
-<p> {{ comment.text }}
-({{ comment.updated_at|naturaltime }})
-{% if user == comment.owner %}
-<a href="{% url 'ads:ad_comment_delete' comment.id %}"><i class="fa fa-trash"></i></a>
+
+{% if comments %}
+    <h2 style="font-size: 1.6em; font-style: italic;">Comments</h2>
 {% endif %}
-</p>
+
+{% for comment in comments %}
+    <p> {{ comment.text }}
+        ({{ comment.updated_at|naturaltime }})
+        {% if user == comment.owner %}
+            <a href="{% url 'ads:ad_comment_delete' comment.id %}"><i class="fa fa-trash"></i></a>
+        {% endif %}
+    </p>
 {% endfor %}
 {% endblock %}

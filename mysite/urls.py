@@ -11,6 +11,7 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
     path('', include('ads.urls')),
+    path('ads/', include('ads.urls')),
     path('admin/', admin.site.urls),
     url(r'^site/(?P<path>.*)$', serve,
         {'document_root': SITE_ROOT, 'show_indexes': True},

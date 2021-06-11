@@ -25,7 +25,7 @@ APP_NAME = 'AdSpace'   # Add
 SECRET_KEY = 'uzr)a8=(t4mztg!pccbzab*vr0om!fw@9^k%cux=#vh7wo4zn5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
