@@ -46,12 +46,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'social_django',
 
-    'polls.apps.PollsConfig',
     'home.apps.HomeConfig',
     'ads.apps.AdsConfig',
-    'hello.apps.HelloConfig',
-    'autos.apps.AutosConfig',
-    'cats.apps.CatsConfig',
     'register.apps.RegisterConfig',
 ]
 

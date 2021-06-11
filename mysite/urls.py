@@ -12,18 +12,13 @@ SITE_ROOT = os.path.join(BASE_DIR, 'site')
 urlpatterns = [
     path('', include('ads.urls')),
     path('admin/', admin.site.urls),
-    path('polls/', include('polls.urls')),
     url(r'^site/(?P<path>.*)$', serve,
         {'document_root': SITE_ROOT, 'show_indexes': True},
         name='site_path'
     ),
-    url(r'^oauth/', include('social_django.urls', namespace='social')),  # Keep
-    path('hello/', include('hello.urls')),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('register/', include('register.urls')),
-    path('autos/', include('autos.urls')),
-    path('cats/', include('cats.urls')),
-    path('ads/', include('ads.urls')),
 ]
 
 # Serve the static HTML
