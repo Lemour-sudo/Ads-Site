@@ -6,12 +6,11 @@
     <h2>Sign Page</h2>
 
     {% load crispy_forms_tags %}
-
     <form method="post">
         {% csrf_token %}
+
         {{ form|crispy }}
+
         <button type="submit">Register</button>
-        <br><br>
-        <a href="{% url 'ads:all'  %}">Home</a>
     </form>
 {% endblock content %}

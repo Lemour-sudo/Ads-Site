@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = os.path.join(BASE_DIR, 'site')
 
 urlpatterns = [
-    path('', include('home.urls')),
+    path('', include('ads.urls')),
     path('admin/', admin.site.urls),
     path('polls/', include('polls.urls')),
     url(r'^site/(?P<path>.*)$', serve,
@@ -46,16 +46,16 @@ urlpatterns += [
 ]
 
 # Switch to social login if it is configured - Keep for later
-try:
-    from . import github_settings
-    social_login = 'registration/login_social.html'
-    urlpatterns.insert(0,
-        path('accounts/login/',
-        auth_views.LoginView.as_view(template_name=social_login))
-   )
-    print('Using', social_login, 'as the login template')
-except:
-    print('Using registration/login.html as the login template')
+# try:
+#     from . import github_settings
+#     social_login = 'registration/login_social.html'
+#     urlpatterns.insert(0,
+#         path('accounts/login/',
+#         auth_views.LoginView.as_view(template_name=social_login))
+#   )
+#     print('Using', social_login, 'as the login template')
+# except:
+#     print('Using registration/login.html as the login template')
 
 # References
 

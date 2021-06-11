@@ -4,11 +4,6 @@
 <!-- Edit dj4e-samples/settings.py and add APP_NAME = 'DJ4E Samples' or similar -->
 <title>{% block title %}{{ settings.APP_NAME }}{% endblock %}</title>
 
-<!-- Replace this value (42-42) with the one provided by the autograder -->
-<meta name="dj4e" content="5f06f7aeeca9a91b8cab79b2b83bdda5">
-
-<meta name="dj4e-code" content="42161242671786">
-
 <link rel="stylesheet"
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
     crossorigin="anonymous">
@@ -35,7 +30,11 @@
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/v4-shims.css">
 
-<meta name="dj4e-version" content="2020-10-23">
+<style>
+    input {
+        max-width: 30em;
+    }
+</style>
 
 {% block head %} {% endblock %}
 
