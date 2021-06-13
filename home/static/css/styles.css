@@ -137,6 +137,7 @@ input {
   display: flex;
   justify-content: center;
   gap: 1em;
+  margin: 2em auto 1em;
 }
 .utility-buttons .btn {
   width: 15ch;
@@ -156,6 +157,12 @@ input {
   padding: 1em;
   border-radius: 0.5em;
   background: var(--passionate-bed-gradient);
+}
+.ad-details h1 {
+  font-size: 2em;
+}
+.ad-details p {
+  font-size: 1em;
 }
 
 .ad-details-img {
