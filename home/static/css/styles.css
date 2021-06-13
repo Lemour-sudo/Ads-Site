@@ -19,10 +19,6 @@ body {
 .container-fluid {
   padding: 0;
 }
-
-.body-container {
-  margin: 7em 15em 0;
-}
   
 input {
   max-width: 30em;
@@ -155,40 +151,20 @@ input {
 
 
 /*** Ad Details Section ***/
+
 .ad-details {
-  display: flex;
-  gap: 1em;
-}
-
-.ad-details > * {
-  flex-basis: 100%;
-}
-
-.ad-details .left-section {
-  /* height: fit-content; */
   padding: 1em;
   border-radius: 0.5em;
   background: var(--passionate-bed-gradient);
 }
 
-.ad-details .right-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  align-items: center;
-  justify-content: center;
-}
-
-.ad-details .right-section img {
+.ad-details-img {
   height: 100%;
   width: 100%;
   border-radius: 0.5em;
   box-shadow: 10px 10px 5px #ccc;
 }
 
-.ad-details .right-section p {
-  margin-top: 3em;
-}
 
 /*** Cards Section ***/
 .cards-group {
