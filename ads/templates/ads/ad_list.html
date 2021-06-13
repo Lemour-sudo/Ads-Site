@@ -20,6 +20,18 @@
   </div>
 </div>
 
+{% block messages %}
+  <div class="container text-center mt-3">
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-{{msg.level_tag}}" role="alert">
+          {{msg.message}}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}
+
 <div class="container">
   <p class="intro">
     Check out this AdSpace for cool and intriguing business adverts. <br>

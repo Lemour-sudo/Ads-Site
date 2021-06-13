@@ -14,5 +14,7 @@
   
     <button class="btn btn-primary" type="submit">Register</button>
   </form>
+
+  <p class="mt-4">Have an account already? <a href="{% url 'login' %}?next={% url 'ads:all' %}">Login here</a>.</p>
 </div>
 {% endblock content %}

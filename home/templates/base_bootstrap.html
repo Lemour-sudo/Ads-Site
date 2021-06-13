@@ -29,7 +29,7 @@
 
     {% block welcome %} {% endblock %}
 
-    {% block messages %}
+    {% comment %} {% block messages %}
       {% if messages %}
         {% for msg in messages %}
           <div class="alert alert-{{msg.level_tag}}" role="alert">
@@ -37,7 +37,8 @@
           </div>
         {% endfor %}
       {% endif %}
-    {% endblock %}
+    {% endblock %} {% endcomment %}
+
     {% block content %} {% endblock %}
   </div>
 
