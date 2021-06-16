@@ -123,6 +123,7 @@ input, textarea {
   -webkit-text-fill-color: transparent;
 }
 .hero-content h1 {
+  display: inline;  /*Important for Safari to view this part. Safari treats -webkit-text-fill-color differently;*/
   font-size: 1.75em;
   font-weight: bold;
 }
