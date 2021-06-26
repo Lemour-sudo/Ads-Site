@@ -18,7 +18,7 @@ class CreateForm(forms.ModelForm):
     # Hint: this will need to be changed for use in the ads application :)
     class Meta:
         model = Ad
-        labels = {'phonenumber': 'Phone number'}
+        labels = {'phonenumber': 'Phone number (international standard)'}
         fields = ['title', 'text', 'price', 'email', 'phonenumber', 'picture']  # Picture is manual
 
     # Validate the size of the picture
