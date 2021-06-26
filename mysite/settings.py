@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rest_framework',
     'social_django',
+    'phonenumber_field',
 
     'home.apps.HomeConfig',
     'ads.apps.AdsConfig',

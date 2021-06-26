@@ -199,6 +199,18 @@ input, textarea {
   box-shadow: 10px 10px 5px #ccc;
 }
 
+.contact-section {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2em;
+}
+.contact-section > * + * {
+  margin-left: 2em;
+}
+.contact-section > * {
+  color: wheat;
+}
+
 
 /*** Cards Section ***/
 .cards-group {

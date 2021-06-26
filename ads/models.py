@@ -1,14 +1,17 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 from django.conf import settings
+from phonenumber_field.modelfields import PhoneNumberField
 
-class Ad(models.Model) :
+class Ad(models.Model):
     title = models.CharField(
             max_length=200,
             validators=[MinLengthValidator(2, "Title must be greater than 2 characters")]
     )
-    price = models.DecimalField(max_digits=7, decimal_places=2, null=True)
+    price = models.DecimalField(max_digits=7, decimal_places=2, null=True, blank=True)
     text = models.TextField()
+    email = models.EmailField(blank=True)
+    phonenumber = PhoneNumberField(blank=True)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     favorites = models.ManyToManyField(settings.AUTH_USER_MODEL,
         through='Fav', related_name='favorite_ads')

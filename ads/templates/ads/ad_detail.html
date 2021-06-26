@@ -35,6 +35,16 @@
           {{ ad.text }}
         </p>
 
+        <div class="contact-section">
+          {% if ad.email %}
+            <a href="mailto:{{ ad.email }}"><i class="far fa-envelope fa-2x px-1"></i><br>Email</a>
+          {% endif %}
+
+          {% if ad.phonenumber %}
+            <a href="tel:{{ ad.phonenumber }}"><i class="fas fa-phone fa-2x"></i><br>Call</a>
+          {% endif %}
+        </div>
+
         {% if user.is_authenticated %}
           <br clear="all" />
           <p>
